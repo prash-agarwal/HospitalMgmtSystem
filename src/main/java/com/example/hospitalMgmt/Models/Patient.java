@@ -25,7 +25,11 @@ import lombok.Setter;
 //dependencies will be added in pom.
 //whereas in Rdbms, there will be same dependency for all databases of JPA.
 
-//@Entity
+//@Entity			//@Entity represents that the class is a JPA entity, representing a table in the database.
+//@Entity can work alone to define a class as a Database table
+//we use @Table alongwith @Entity when we want to customize the name of the db table 
+//other than the class name. 
+//if we use only @Table, then it will give error.
 //@Table(name="myBookTable")  //On app startup name field value would be as specified. 
 public class Patient {
 
@@ -62,8 +66,8 @@ public class Patient {
 		this.doctorName = doctorName;
 	}
 	//@Id				//It is used to create primary key.
-	//IDENTITY - auto incrment will be taken care by mysql
-	//Auto - auto incrment will be taken care by hibernate
+	//IDENTITY - auto increment will be taken care by mysql.
+	//Auto - auto increment will be taken care by hibernate
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)  //used for Auto-Increment.
 	long patientId;  //patient_Id
 	String name;  //name

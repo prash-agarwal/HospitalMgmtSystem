@@ -22,8 +22,6 @@ public class PatientRepo {
 	
 	Logger logger=LoggerFactory.getLogger(PatientRepo.class);
 	
-	
-	
 //Parameters : a database url of the form jdbc:subprotocol:subname
 //	Understanding DriverManager.getConnection():
 //
@@ -53,7 +51,7 @@ public class PatientRepo {
 
 	public void insertPatient(Patient patient) throws SQLException {
 		
-		//TODO : adds sql queries to add patteint details to DB.
+		//TODO : adds sql queries to add patient details to DB.
 		//Repo file consists of all the SQL queries.
 		logger.info("Inside insertPatient Method in Repo Class");
 		//Auto_increment in sql adds 1 to the largest id found in the column id(Integer)
@@ -117,7 +115,6 @@ public boolean deletePatient(int id) throws SQLException {
 	if(val > 0) {
 		return true;
 	}
-	
 	
 	return false;
 }
