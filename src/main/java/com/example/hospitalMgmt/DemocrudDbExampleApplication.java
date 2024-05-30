@@ -1,5 +1,4 @@
 package com.example.hospitalMgmt;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
